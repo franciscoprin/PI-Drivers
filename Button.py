@@ -48,7 +48,7 @@ class Button (threading.Thread):
                     time.sleep(0.075)
                 # self.semaphore.release()
         except KeyboardInterrupt:  # If CTRL+Z is pressed, exit cleanly:
-            print("You pressed CTRL+Z")
+            print("You pressed CTRL+Z sdasdasdd")
             self.pwm.stop()  # stop PWM
             GPIO.cleanup()  # cleanup all GPIO
 
