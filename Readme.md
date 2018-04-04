@@ -16,6 +16,8 @@
 - **Install git in debein:**
     + ` $ sudo apt-get install git-core`
          * [Link](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-8)
+- **Intall python-kafka:**
+    + ` $ pip install kafka-python` 
 - Set up wifi
     + Change the file in `"/etc/network/interfaces.d"` with.
             

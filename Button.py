@@ -11,7 +11,7 @@ class Button (threading.Thread):
         self.buttonPing = 6
         self.groundPing = 12
         GPIO.setmode(GPIO.BOARD)
-        self.pwm = GPIO.PWM(self.powerPing, 50)  # Initialize PWM on pwmPin 100Hz frequency
+        self.pwm = GPIO.PWM(self.buttonPing, 50)  # Initialize PWM on pwmPin 100Hz frequency
         self.dc = 95  # duty cycle (0-100) for PWM pin
 
     def setButtonPing(self, buttonPing):
