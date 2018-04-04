@@ -3,7 +3,8 @@ from kafka import SimpleProducer
 import json
 
 class Producer:
-    def __init__(self):
+    def __init__(self,semaphore):
+    # Setting producer variables.
         self.port = 9092
         self.IP = 'localhost'
         self.topic = 'test'
