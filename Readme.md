@@ -79,6 +79,8 @@
     + **UserName:** deepcast || pi  (deepcast doesn't have sudo power, `why?`) 
     + **Passwor:** ai
     + **IP addres:** 10.0.0.116
+- **List all the availables port in windows:**
+    + `$ netstat -aon | find /i "listening"`
 
 
 ## Investigate

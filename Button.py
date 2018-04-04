@@ -40,10 +40,12 @@ class Button (threading.Thread):
             while True:
                 # self.semaphore.acquire()
                 if GPIO.input(self.buttonPing):  # button is released
+                   #
                    self.pwm.ChangeDutyCycle(self.dc)
                    pass # do random graph
                 else:  # button is pressed:
                     self.pwm.ChangeDutyCycle(100 - self.dc)
+                    # Changing to random graph. (just add random buttons)
                     print("Down")
                     time.sleep(0.075)
                 # self.semaphore.release()
