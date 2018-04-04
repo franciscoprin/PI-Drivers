@@ -3,7 +3,7 @@ from Button import Button
 import threading
 semaphore = threading.Semaphore(1)
 
-producer = ProducerThread(10,semaphore)
+producer = ProducerThread(semaphore)
 button = Button(semaphore)
 
 producer.start()
