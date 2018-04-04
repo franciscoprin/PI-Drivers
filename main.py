@@ -3,12 +3,12 @@ from Button import Button
 import threading
 semaphore = threading.Semaphore(1)
 
-# producer = ProducerThread(10,semaphore)
+producer = ProducerThread(10,semaphore)
 button = Button(semaphore)
 
-# producer.start()
+producer.start()
 button.start()
-# producer.join()
+producer.join()
 button.join()
 
 print ("Exiting Main Thread")
