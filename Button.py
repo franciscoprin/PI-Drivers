@@ -8,8 +8,8 @@ class Button (threading.Thread):
         threading.Thread.__init__(self)
         self.semaphore = semaphore
     # setting button variables.
-        self.buttonPing = 6
-        self.groundPing = 12
+        self.buttonPing = 12
+        self.groundPing = 6
         GPIO.setmode(GPIO.BOARD)
         self.pwm = GPIO.PWM(self.buttonPing, 50)  # Initialize PWM on pwmPin 100Hz frequency
         self.dc = 95  # duty cycle (0-100) for PWM pin
