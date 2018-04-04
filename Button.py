@@ -38,16 +38,17 @@ class Button (threading.Thread):
         self.pwm.start(self.dc)
         try:
             while True:
-                self.semaphore.acquire()
+                # self.semaphore.acquire()
                 print("Still working......")
                 if GPIO.input(self.buttonPing):  # button is released
+                   print("Button is released")
                    self.pwm.ChangeDutyCycle(self.dc)
                    pass # do random graph
                 else:  # button is pressed:
                     self.pwm.ChangeDutyCycle(100 - self.dc)
                     print("Down")
                     time.sleep(0.015)
-                self.semaphore.release()
+                # self.semaphore.release()
         except KeyboardInterrupt:  # If CTRL+C is pressed, exit cleanly:
             self.pwm.stop()  # stop PWM
             GPIO.cleanup()  # cleanup all GPIO
