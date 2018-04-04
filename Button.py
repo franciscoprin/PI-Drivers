@@ -14,8 +14,8 @@ class Button (threading.Thread):
         self.power = 7
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.buttonPing , GPIO.IN)
-        GPIO.setup(self.buttonPing, GPIO.OUT)
-        self.pwm = GPIO.PWM(self.buttonPing, 50)  # Initialize PWM on pwmPin 100Hz frequency
+        GPIO.setup(self.power, GPIO.OUT)
+        self.pwm = GPIO.PWM(self.power, 50)  # Initialize PWM on pwmPin 100Hz frequency
         self.dc = 95  # duty cycle (0-100) for PWM pin
 
     def setButtonPing(self, buttonPing):
@@ -48,7 +48,7 @@ class Button (threading.Thread):
                     self.pwm.ChangeDutyCycle(100 - self.dc)
                     print("Down")
                     time.sleep(5)
-                time.sleep(5)
+                time.sleep(100)
                 # self.semaphore.release()
         except KeyboardInterrupt:  # If CTRL+C is pressed, exit cleanly:
             self.pwm.stop()  # stop PWM
