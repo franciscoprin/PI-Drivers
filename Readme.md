@@ -36,7 +36,11 @@
 
                 
 - Conect remotly to raspberry pi with IP addres.
-    + This option if you only have terminal
+    + Connect with GitBash
+        * Open Git Bahs
+        * Type
+            - `ssh <userName>@<IP>` (i.e: ssh pi@10.0.0.116)
+    + Connect with putty (with or withough GUI)
         * Install putty:
             - Link: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
         * Enable SSH inside of the raspberry pi:

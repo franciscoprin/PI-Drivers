@@ -37,8 +37,9 @@ class Button (threading.Thread):
         print("Here we go! Press CTRL+C to exit")
         self.pwm.start(self.dc)
         try:
-            while 1:
+            while True:
                 self.semaphore.acquire()
+                print("Still working......")
                 if GPIO.input(self.buttonPing):  # button is released
                    self.pwm.ChangeDutyCycle(self.dc)
                    pass # do random graph
