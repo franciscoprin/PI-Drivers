@@ -11,7 +11,7 @@ class Button (threading.Thread):
         self.allowPings = [7,12,11,13,15,16,18,22,29,31,32,33,35,36,37,38,40]
     # setting button variables.
         self.buttonPing = 12
-        self.power = 1
+        self.power = 7
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.buttonPing , GPIO.IN)
         GPIO.setup(self.power, GPIO.OUT)
