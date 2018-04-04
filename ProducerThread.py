@@ -13,7 +13,7 @@ class ProducerThread (threading.Thread):
 
    def run(self):
        # Setting producer.
-       producer = Producer()
+       producer = Producer(self.semaphore)
        producer.setPort(9092)
        producer.setIP("10.0.0.63")
        producer.startConnection()
