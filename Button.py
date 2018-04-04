@@ -47,7 +47,8 @@ class Button (threading.Thread):
                 else:  # button is pressed:
                     self.pwm.ChangeDutyCycle(100 - self.dc)
                     print("Down")
-                    time.sleep(0.015)
+                    time.sleep(5)
+                time.sleep(5)
                 # self.semaphore.release()
         except KeyboardInterrupt:  # If CTRL+C is pressed, exit cleanly:
             self.pwm.stop()  # stop PWM
