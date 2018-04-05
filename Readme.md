@@ -44,7 +44,7 @@
         * Install putty:
             - Link: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
         * Enable SSH inside of the raspberry pi:
-            - sudo `raspi-config`
+            - `$ sudo raspi-config`
             - Select `Interfacing Options`
             - Navigate to and select `SSH`
             - Choose `Yes`
@@ -81,6 +81,10 @@
     + **IP addres:** 10.0.0.116
 - **List all the availables port in windows:**
     + `$ netstat -aon | find /i "listening"`
+- **List IP in Rasbian:** 
+    + `$ sudo arp-scan -l --interface=wlan0`
+- **List IP in Rasbian:** 
+    + `$ netstat -pln`
 
 
 ## Investigate

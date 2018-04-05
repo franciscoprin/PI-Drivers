@@ -38,17 +38,16 @@ class Button (threading.Thread):
         self.pwm.start(self.dc)
         try:
             while True:
-                # self.semaphore.acquire()
+                self.semaphore.acquire()
                 if GPIO.input(self.buttonPing):  # button is released
                    #
                    self.pwm.ChangeDutyCycle(self.dc)
-                   pass # do random graph
                 else:  # button is pressed:
                     self.pwm.ChangeDutyCycle(100 - self.dc)
                     # Changing to random graph. (just add random buttons)
                     print("Down")
                     time.sleep(0.075)
-                # self.semaphore.release()
+                self.semaphore.release()
         except KeyboardInterrupt:  # If CTRL+Z is pressed, exit cleanly:
             print("You pressed CTRL+Z sdasdasdd")
             self.pwm.stop()  # stop PWM

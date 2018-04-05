@@ -25,6 +25,7 @@ services:
     environment:
       ZK_HOSTS: "kafkaserver:2181"
 
+
 networks:
   kafkanet:
     driver: bridge

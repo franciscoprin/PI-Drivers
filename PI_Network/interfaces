@@ -15,5 +15,5 @@ auto wlan0
  
  
 iface wlan0 inet manual
-        wpa-ssid "DC"
+        wpa-ssid "HK"
         wpa-psk "5124223639"
