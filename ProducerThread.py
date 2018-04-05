@@ -15,7 +15,7 @@ class ProducerThread (threading.Thread):
        # Setting producer.
        producer = Producer(self.semaphore)
        producer.setPort(9092)
-       producer.setIP("10.0.0.63")
+       producer.setIP("10.0.0.212")
        producer.startConnection()
        #sending messages.
        for x in range(0, 100):
